@@ -1,0 +1,21 @@
+---
+layout: default
+title: Stanford
+---
+<h1>The Stanford (Ed-Tech) Network</h1>
+
+<!-- People -->
+{% assign people = site.data.people %}
+{% assign people = people | sort:"Name" %}
+
+<!-- Document -->
+
+{% for person in people %}
+
+<p><strong>{{ person.Name }}</strong></p>
+
+<p>{{ person.Role }}, {{ person.Notes }}</p>
+
+<hr >
+{% endfor %}
+
